@@ -1,0 +1,33 @@
+<div class="container">
+    <section>
+        <h1 class="title"> Productos </h1>
+        <div class="columns">
+            <div class="column" *ngFor="let item of modeloTienda.tiendaItems">
+                {{ item['titulo'] }}
+
+                <div class="is-one-quarter">
+                    <div class="card">
+                      <div class="card-image">
+                        <figure class="image is-4by3">
+                          <img src="assets/products/{{ item.imagen }}" />
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <strong>{{ item.titulo }}</strong
+                        ><br />
+                        <p>
+                          {{ item.texto }}
+                        </p>
+                  
+                        <button
+                          class="button is-fullwidth is-small"
+                        >
+                        COMPRAR POR ${{item.precio}}
+                        </button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
