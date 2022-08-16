@@ -10,11 +10,15 @@ import { TiendaModel } from '../models/tienda.model';
 export class ConEstadoComponent implements OnInit {
 
   modeloTienda: TiendaModel = new TiendaModel();
-  carroCompras: Array<Producto> = [];
+  carroCompras: Array<Producto>;
  
-  constructor() { }
+  constructor() { 
+    this.carroCompras = [];
+  }
 
   ngOnInit(): void {
   }
-
+  seleccionarItem(item: Producto): void {
+    this.carroCompras.push(item)
+  }
 }

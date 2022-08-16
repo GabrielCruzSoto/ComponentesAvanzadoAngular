@@ -21,6 +21,7 @@
                   
                         <button
                           class="button is-fullwidth is-small"
+                          (click)="seleccionarItem(item)"
                         >
                         COMPRAR POR ${{item.precio}}
                         </button>
@@ -29,5 +30,10 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section>
+        <li *ngFor="let productoCarro of carroCompras ">
+            {{productoCarro.titulo}}
+        </li>
     </section>
 </div>
